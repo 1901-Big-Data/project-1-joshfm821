@@ -25,6 +25,7 @@ public class Driver extends Configured implements Tool {
 			System.exit(-1);
 		}
 		Job job = new Job(getConf());
+		//job.setNumReduceTasks(0); //set reducer to 0
 		job.setJarByClass(Driver.class);
 		job.setJobName("Gender Study");
 		
